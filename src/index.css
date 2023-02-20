@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Megrim";
+  src: url("./fonts/Megrim-Regular.ttf");
+}
+@font-face {
+  font-family: "TrainOne-Regular";
+  src: url("./fonts/TrainOne-Regular.ttf");
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.card {
+  @apply bg-white rounded overflow-hidden shadow-md hover:shadow-lg relative;
+}
+.badge {
+  @apply bg-gray-200 text-xs font-bold rounded rounded-full p-1.5 uppercase absolute top-0 ml-2 mt-2;
+}
+.btn {
+  @apply rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider m-2;
+}

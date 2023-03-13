@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             </h1>
             <div className="px-4 cursor-pointer md:hidden flex">
               <svg
+                id="burger"
                 className="w-6"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -21,7 +23,6 @@ function App() {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
               >
                 <path
                   stroke-linecap="round"
@@ -45,7 +46,6 @@ function App() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-6 h-6"
                 >
                   <path
                     stroke-linecap="round"
@@ -68,7 +68,6 @@ function App() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-6 h-6"
                 >
                   <path
                     stroke-linecap="round"
@@ -144,7 +143,7 @@ function App() {
                 <span className=" text-gray-700 font-semibold">
                   The streets are too harsh for these delicate puppies
                 </span>
-                <span className="block">Recipe by Mario</span>
+                <span className="block">Photo taken from internet</span>
               </div>
             </div>
           </div>
@@ -168,21 +167,6 @@ function App() {
                 </span>
               </div>
               <div className="badge">
-                <svg
-                  className="w-5 inline-block"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
                 <span>25 mins</span>
               </div>
             </div>
@@ -201,21 +185,6 @@ function App() {
                 </span>
               </div>
               <div className="badge">
-                <svg
-                  className="w-5 inline-block"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
                 <span>25 mins</span>
               </div>
             </div>
@@ -234,21 +203,6 @@ function App() {
                 </span>
               </div>
               <div className="badge">
-                <svg
-                  className="w-5 inline-block"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
                 <span>25 mins</span>
               </div>
             </div>
@@ -261,6 +215,9 @@ function App() {
           </div>
         </div>
       </main>
+      <HelmetProvider>
+        <script src="./header.js" />
+      </HelmetProvider>
     </div>
   );
 }
